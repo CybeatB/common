@@ -38,7 +38,7 @@ char* fgetString(FILE* infile) {
 
 		/* get string from stdin
 		 * and store in dynamic array */
-		while (buf != '\n' && buf != '\0') {
+		while (buf != '\n' && buf != '\0' && buf != EOF) {
 			buf = fgetc(infile);
 			if (rawIn == (char *)NULL) {
 				rawIn = (char *)malloc(sizeof(char));
